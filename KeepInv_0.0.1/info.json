@@ -1,0 +1,9 @@
+{
+  "name": "KeepInv",
+  "version": "0.0.1",
+  "title": "KeepInventory",
+  "author": "Bloc97",
+  "contact": "",
+  "homepage": "",
+  "description": "Lets you keep your inventory on death, useful in multiplayer. Tested on 0.12.30."
+}
