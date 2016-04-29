@@ -29,15 +29,16 @@ function list_inv()
 				if plyr.character == nil then
 					global.plydead[k] = true
 				end
-				
-				if global.plydead[k]==true and plyr.character ~= nil then
-					for item_name,item_count in pairs(global.invlist[k]) do
-						plyr.get_inventory(defines.inventory.chest).insert{name=item_name, count=item_count}
-					end
-					global.plydead[k] = false
+				if global.plydead ~= nil then
+					if global.plydead[k]==true and plyr.character ~= nil then
+						for item_name,item_count in pairs(global.invlist[k]) do
+							plyr.get_inventory(defines.inventory.chest).insert{name=item_name, count=item_count}
+						end
+						global.plydead[k] = false
 			
-				else if plyr.character ~= nil and plyr.name ~= nil then
-					global.invlist[k]=plyr.get_inventory(defines.inventory.chest).get_contents()
+					else if plyr.character ~= nil and plyr.name ~= nil then
+						global.invlist[k]=plyr.get_inventory(defines.inventory.chest).get_contents()
+					end
 				end
 			end
 			end
