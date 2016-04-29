@@ -5,16 +5,15 @@ require "util"
 
 script.on_event(defines.events.on_tick, function(event)
 	
-	if (game.tick % 120) == 0 then
-	list_inv()
-	end
-	
 	if global.table_loaded==nil and game.players~=nil then
 	global.invlist={}
 	global.plydead={} 
 	global.table_loaded=true
 	end
 	
+	if (game.tick % 120) == 10 then
+	list_inv()
+	end
 	
 end)
 
